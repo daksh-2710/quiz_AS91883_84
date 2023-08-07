@@ -1,0 +1,42 @@
+import time
+
+def yes_no(question):
+  valid = False
+  while not valid:
+    response = input(question).lower()
+
+    if response == "yes" or "y":
+      response = "yes"
+      return response
+
+    elif response == "no" or "n":
+      response = "no"
+      return response
+
+    else:
+      print("Please type either yes or no")
+
+def statement_generator(statement, decoration):
+
+  sides = decoration * 3
+
+  statement = "{} {} {}".format(sides, statement, sides)
+  top_bottom = decoration * len(statement)
+
+  print(top_bottom)
+  print(statement)
+  print(top_bottom)
+
+  return ""
+
+
+statement_generator("Welcome to this maths quiz!", "*")
+time.sleep(1)
+print()
+print("This quiz will test your knowledge about maths, asking you a series of math questions, including numeric and worded questions")
+time.sleep(2)
+print()
+print("This quiz will have 30 questions")
+time.sleep(2)
+print()
+print("Try your best to get all the questions correct")
