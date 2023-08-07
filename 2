@@ -1,0 +1,77 @@
+import sys
+import time
+
+
+#functions
+def yes_no(question):
+  while True:
+    response = input(question).lower()
+    if response == "yes" or response == "y":
+      response = "yes"
+      return response
+    elif response == "no" or response == "n":
+      response = "no"
+      return response
+    else:
+      print()
+      print("We need a Yes or No answer")
+
+def statement_generator(statement, decoration):
+
+  sides = decoration * 3
+
+  statement = "{} {} {}".format(sides, statement, sides)
+  top_bottom = decoration * len(statement)
+
+  print(top_bottom)
+  print(statement)
+  print(top_bottom)
+
+  return ""
+
+def instructions():
+  print()
+  print("> This quiz will test your knowledge about maths, asking you a series of math questions, including numeric and worded questions")
+  time.sleep(2)
+  print()
+  print("> It will have 30 questions for you to answer")
+  time.sleep(2)
+  print()
+  print("> Try your best to get all the questions correct")
+  time.sleep(1)
+  print()
+  
+  return ""
+
+#main routine
+q
+
+statement_generator("Welcome to this maths quiz!", "*")
+time.sleep(1)
+instructions()
+player_ready = yes_no("Are you ready to start? : ")
+
+if player_ready == "no":
+  print()
+  not_ready = "Thats okay, feel free to play again when your ready"
+  print(not_ready)
+  sys.exit()
+else:
+  print()
+  ready = "Lets get started!"
+  print(ready)
+  time.sleep(1)
+
+print()
+statement_generator("Question 1", "-")
+print()
+answer = input("What is 5x7 : ")
+
+if answer == "35": 
+  print()
+  correct = "Correct!"
+  print(correct)
+else:
+  print()
+  incorrect = "Incorrect"
+  print(incorrect)
