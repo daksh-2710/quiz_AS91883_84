@@ -1,0 +1,489 @@
+import sys
+import time
+
+
+#functions
+def yes_no(question):
+  while True:
+    response = input(question).lower()
+    if response == "yes" or response == "y":
+      response = "yes"
+      return response
+    elif response == "no" or response == "n":
+      response = "no"
+      return response
+    else:
+      print()
+      print("We need a Yes or No answer")
+
+def statement_generator(statement, decoration):
+
+  sides = decoration * 3
+
+  statement = "{} {} {}".format(sides, statement, sides)
+  top_bottom = decoration * len(statement)
+
+  print(top_bottom)
+  print(statement)
+  print(top_bottom)
+
+  return ""
+
+def instructions():
+  print()
+  print("> This quiz will test your knowledge about maths, asking you a series of math questions, including numeric and worded questions")
+  time.sleep(2)
+  print()
+  print("> It will have 30 questions for you to answer")
+  time.sleep(2)
+  print()
+  print("> Use 'r' if there is a remainder: e.g - '10 r 2'")
+  time.sleep(2)
+  print()
+  print("> Try your best to get all the questions correct")
+  time.sleep(1)
+  print()
+  
+  return ""
+
+#main routine
+
+q_correct = 0
+q_incorrect = 0
+user_input = ""
+
+statement_generator("Welcome to this maths quiz!", "*")
+time.sleep(1)
+instructions()
+while True:
+  user_input = input("What is your name? ")
+
+  if not user_input.isalpha():
+    print()
+    print("Please put in your name so we can continue this quiz")
+    print()
+  else:
+    print()
+    print("")
+    name_acc = ("Hello {}").format(user_input)
+    print(name_acc)
+    break
+player_ready = yes_no("Are you ready to start? : ")
+
+if player_ready == "no":
+  print()
+  not_ready = "Thats okay, feel free to play again when your ready"
+  print(not_ready)
+  sys.exit()
+else:
+  print()
+  ready = "Lets get started!"
+  print(ready)
+  time.sleep(1)
+
+print()
+statement_generator("Question 1", "-")
+print()
+answer = input("What is 5 x 7 : ")
+
+if answer == "35": 
+  print()
+  correct = "Correct!"
+  q_correct += 1
+  print(correct)
+else:
+  print()
+  incorrect = "Incorrect"
+  q_incorrect += 1
+  print(incorrect)
+
+time.sleep(1)
+
+print()
+statement_generator("Question 2", "-")
+print()
+answer2 = input("What is 7 - 9 : ")
+
+if answer2 == "-2": 
+  print()
+  correct = "Correct!"
+  q_correct += 1
+  print(correct)
+else:
+  print()
+  incorrect = "Incorrect"
+  q_incorrect += 1
+  print(incorrect)
+
+time.sleep(1)
+
+print()
+statement_generator("Question 3", "-")
+print()
+answer3 = input("What is 14 + 25 : ")
+
+if answer3 == "39": 
+  print()
+  correct = "Correct!"
+  q_correct += 1
+  print(correct)
+else:
+  print()
+  incorrect = "Incorrect"
+  q_incorrect += 1
+  print(incorrect)
+
+time.sleep(1)
+
+print()
+statement_generator("Question 4", "-")
+print()
+answer4 = input("What is 81 ÷ 9  : ")
+
+if answer4 == "9": 
+  print()
+  correct = "Correct!"
+  q_correct += 1
+  print(correct)
+else:
+  print()
+  incorrect = "Incorrect"
+  q_incorrect += 1
+  print(incorrect)
+
+time.sleep(1)
+
+print()
+statement_generator("Question 5", "-")
+print()
+answer5 = input("If person 1 has 24 apples and person 2 has 56 apples, how many apples are there altogether? : ")
+
+if answer5 == "80": 
+  print()
+  correct = "Correct!"
+  q_correct += 1
+  print(correct)
+else:
+  print()
+  incorrect = "Incorrect"
+  q_incorrect += 1
+  print(incorrect)
+
+time.sleep(1)
+
+print()
+statement_generator("Question 6", "-")
+print()
+answer6 = input("Person 1 has 25 marbles, he gives 14 away, how many marbles does Person 1 have? : ")
+
+if answer6 == "11": 
+  print()
+  correct = "Correct!"
+  q_correct += 1
+  print(correct)
+else:
+  print()
+  incorrect = "Incorrect"
+  q_incorrect += 1
+  print(incorrect)
+
+time.sleep(1)
+
+print()
+statement_generator("Question 7", "-")
+print()
+answer7 = input("Person 1 has 64 chocolates, he gives to 8 other people equally, how many did Person 1 give to each person? : ")
+
+if answer7 == "8": 
+  print()
+  correct = "Correct!"
+  q_correct += 1
+  print(correct)
+else:
+  print()
+  incorrect = "Incorrect"
+  q_incorrect += 1
+  print(incorrect)
+
+time.sleep(1)
+
+print()
+statement_generator("Question 8", "-")
+print()
+answer8 = input("There are 7 bags of lollies in each box. If there are 12 boxes, how many lollies are there? : ")
+
+if answer8 == "84": 
+  print()
+  correct = "Correct!"
+  q_correct += 1
+  print(correct)
+else:
+  print()
+  incorrect = "Incorrect"
+  q_incorrect += 1
+  print(incorrect)
+
+time.sleep(1)
+
+print()
+statement_generator("Question 9", "-")
+print()
+answer9 = input("What is 93 ÷ 7? : ")
+
+if answer9 == "13 r 2": 
+  print()
+  correct = "Correct!"
+  q_correct += 1
+  print(correct)
+else:
+  print()
+  incorrect = "Incorrect"
+  q_incorrect += 1
+  print(incorrect)
+
+time.sleep(1)
+
+print()
+statement_generator("Question 10", "-")
+print()
+answer10 = input("What is 14 x 7? : ")
+
+if answer10 == "98": 
+  print()
+  correct = "Correct!"
+  q_correct += 1
+  print(correct)
+else:
+  print()
+  incorrect = "Incorrect"
+  q_incorrect += 1
+  print(incorrect)
+
+time.sleep(2)
+print()
+statement_generator("You are 1/3 into this quiz so far!", ".")
+print()
+time.sleep(1)
+print("{}, you have gotten {} correct answers, and {} incorrect answers from these 10 questions".format(user_input, q_correct, q_incorrect))
+print()
+continue_quiz = yes_no("Questions past this point will get slightly harder. Would you like to continue this quiz? : ")
+
+if continue_quiz == "no":
+  print()
+  exit_quiz = "-Thanks for playing this quiz-"
+  print(exit_quiz)
+  sys.exit()
+else:
+  print()
+  continuing = "*Continuing*"
+  print(continuing)
+  time.sleep(1)
+
+print()
+statement_generator("Question 11", "-")
+print()
+answer11 = input("What is 72 + 157? : ")
+
+if answer11 == "229": 
+  print()
+  correct = "Correct!"
+  q_correct += 1
+  print(correct)
+else:
+  print()
+  incorrect = "Incorrect"
+  q_incorrect += 1
+  print(incorrect)
+
+time.sleep(1)
+
+
+print()
+statement_generator("Question 12", "-")
+print()
+answer12 = input("What is 47 - 56? : ")
+
+if answer12 == "-9": 
+  print()
+  correct = "Correct!"
+  q_correct += 1
+  print(correct)
+else:
+  print()
+  incorrect = "Incorrect"
+  q_incorrect += 1
+  print(incorrect)
+
+time.sleep(1)
+
+
+print()
+statement_generator("Question 13", "-")
+print()
+answer13 = input("What is 47 x 11? : ")
+
+if answer13 == "517": 
+  print()
+  correct = "Correct!"
+  q_correct += 1
+  print(correct)
+else:
+  print()
+  incorrect = "Incorrect"
+  q_incorrect += 1
+  print(incorrect)
+
+time.sleep(1)
+
+
+print()
+statement_generator("Question 14", "-")
+print()
+answer14 = input("What is 110 ÷ 10 ? : ")
+
+if answer14 == "10": 
+  print()
+  correct = "Correct!"
+  q_correct += 1
+  print(correct)
+else:
+  print()
+  incorrect = "Incorrect"
+  q_incorrect += 1
+  print(incorrect)
+
+time.sleep(1)
+
+
+print()
+statement_generator("Question 15", "-")
+print()
+answer15 = input("What is 24(7+3)-2 ? : ")
+
+if answer15 == "238": 
+  print()
+  correct = "Correct!"
+  q_correct += 1
+  print(correct)
+else:
+  print()
+  incorrect = "Incorrect"
+  q_incorrect += 1
+  print(incorrect)
+
+time.sleep(1)
+
+
+print()
+statement_generator("Question 16", "-")
+print()
+answer16 = input("What is 42x7(2-9)+1 ? : ")
+
+if answer16 == "-2057": 
+  print()
+  correct = "Correct!"
+  q_correct += 1
+  print(correct)
+else:
+  print()
+  incorrect = "Incorrect"
+  q_incorrect += 1
+  print(incorrect)
+
+time.sleep(1)
+
+
+print()
+statement_generator("Question 17", "-")
+print()
+answer17 = input("What is 9+6x7(4)? : ")
+
+if answer17 == "177": 
+  print()
+  correct = "Correct!"
+  q_correct += 1
+  print(correct)
+else:
+  print()
+  incorrect = "Incorrect"
+  q_incorrect += 1
+  print(incorrect)
+
+time.sleep(1)
+
+
+print()
+statement_generator("Question 18", "-")
+print()
+answer18 = input("If Person 1 has 10 boxes, each box containing 12 drinks, and gives the boxes to 5 people equally. How many drinks do each person get? : ")
+
+if answer18 == "24": 
+  print()
+  correct = "Correct!"
+  q_correct += 1
+  print(correct)
+else:
+  print()
+  incorrect = "Incorrect"
+  q_incorrect += 1
+  print(incorrect)
+
+time.sleep(1)
+
+
+print()
+statement_generator("Question 19", "-")
+print()
+answer19 = input("What is 72 x 7 + 49? : ")
+
+if answer19 == "553": 
+  print()
+  correct = "Correct!"
+  q_correct += 1
+  print(correct)
+else:
+  print()
+  incorrect = "Incorrect"
+  q_incorrect += 1
+  print(incorrect)
+
+time.sleep(1)
+
+
+print()
+statement_generator("Question 20", "-")
+print()
+answer20 = input("What is 402 - 735? : ")
+
+if answer20 == "-333": 
+  print()
+  correct = "Correct!"
+  q_correct += 1
+  print(correct)
+else:
+  print()
+  incorrect = "Incorrect"
+  q_incorrect += 1
+  print(incorrect)
+
+
+time.sleep(2)
+print()
+statement_generator("You are 2/3 into this quiz so far!", ".")
+print()
+time.sleep(1)
+print("{}, you have gotten {} correct answers, and {} incorrect answers from these 20 questions".format(user_input, q_correct, q_incorrect))
+print()
+continue_quiz = yes_no("Questions past this point will get slightly harder. Would you like to continue this quiz? : ")
+
+if continue_quiz == "no":
+  print()
+  exit_quiz = "-Thanks for playing this quiz-"
+  print(exit_quiz)
+  sys.exit()
+else:
+  print()
+  continuing = "*Continuing*"
+  print(continuing)
+  time.sleep(1)
+
